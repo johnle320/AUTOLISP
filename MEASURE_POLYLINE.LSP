@@ -1,5 +1,11 @@
+;--------------------------------------------------------------------------------------------------
+;--------------------------------------------------------------------------------------------------
+;MEASURE LENGTH OF EACH SEGMENT OF POLYLINES
+;MEASUREMENTS ARE PUT IN A SEPARATE LAYER CALLED "03-LABEL_PLINE_SEG_LEN"
+;--------------------------------------------------------------------------------------------------
+;--------------------------------------------------------------------------------------------------
 (vl-load-com)
-(defun c:CAL_POLY_MEASURE ( / js htx AcDoc Space nw_style n obj ename pr dist_start dist_end pt_start pt_end seg_len alpha nw_obj)
+(defun c:CAL_PLEN_MEAS ( / js htx AcDoc Space nw_style n obj ename pr dist_start dist_end pt_start pt_end seg_len alpha nw_obj)
   (princ "\nSelect polylines.")
   (while
     (null
