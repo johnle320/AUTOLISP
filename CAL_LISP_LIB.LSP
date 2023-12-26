@@ -8,9 +8,9 @@
 ;--------------------------------------------------------------------------------------------------
 (defun c:CAL_ALLLAY_LTSCALE_SETUP()
     (setvar 'ctab "MODEL"); set current tab to be the model tab. From here this function starts to run
-    (alert "The following setting will be applied for model space AND ALL layouts (paper space):\n MSLTSCALE: 1\n PSLTSCALE: 1\n LTSCALE: 0.7\n CELTSCALE: 1\n ANNOAUTOSCALE: 1\n")
+    (alert "The following setting will be applied for model space AND ALL layouts (paper space):\n MSLTSCALE: 1\n PSLTSCALE: 1\n LTSCALE: 1\n CELTSCALE: 1\n ANNOAUTOSCALE: 1\n")
     (command  "MSLTSCALE" 1)
-    (command  "LTSCALE" 0.7)
+    (command  "LTSCALE" 1)
     (command  "CELTSCALE" 1)
     (command  "ANNOAUTOSCALE" 1)
     (foreach lay (layoutlist)
